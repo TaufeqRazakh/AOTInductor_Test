@@ -1,7 +1,7 @@
 #  Ahead-Of-Time Compilation for Torch.Export-ed Models
 
 ## Requirements
-Define a path to the `CMAKE_PREFIX_PATH` variable to locate the LibTorch library. 
+Define a path to the `CMAKE_PREFIX_PATH` variable to locate the LibTorch library within the `infer_model_polaris.sh` file. 
 
 ## Step 1: Generate the Model
 Use script `compile_model_polaris.sh`. this will give you a new shared object `model.so`
