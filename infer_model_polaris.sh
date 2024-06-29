@@ -25,6 +25,7 @@ mkdir build
 cd build
 cmake -DCMAKE_PREFIX_PATH=/soft/applications/conda/2024-04-29/mconda3/lib/python3.11/site-packages/torch/share/cmake $source_folder
 make -j8
+cp $source_folder/model.so .
 ./aoti_example
 
 echo All done
