@@ -7,7 +7,7 @@
 
 module use /soft/modulefiles
 module load spack-pe-base cmake
-module load cudatoolkit-standalone/11.8.0
+module load cudatoolkit-standalone
 module load conda
 module load gcc/13.2.0
 

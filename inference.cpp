@@ -1,13 +1,18 @@
 #include <iostream>
+#include <filesystem>
 #include <vector>
 
 #include <torch/torch.h>
 #include <torch/csrc/inductor/aoti_runner/model_container_runner_cuda.h>
 
 int main() {
+    std::string shared_object_name = "model.so";
+    std::filesystem model_so_path = std::filesystem::current_path();
+    model_so_path /= shared_object_name;
+    std::string model_so_path_string = model_so_path.strin();
     c10::InferenceMode mode;
 
-    torch::inductor::AOTIModelContainerRunnerCuda runner("/eagle/NAQMC_RMD_aesp/razakh/AOTI_Test/model.so");
+    torch::inductor::AOTIModelContainerRunnerCuda runner(model_so_path_string);
     std::vector<torch::Tensor> inputs = {torch::randn({8, 10}, at::kCUDA)};
     std::vector<torch::Tensor> outputs = runner.run(inputs);
     std::cout << "Result from the first inference:"<< std::endl;
