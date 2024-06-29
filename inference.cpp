@@ -7,9 +7,9 @@
 
 int main() {
     std::string shared_object_name = "model.so";
-    std::filesystem model_so_path = std::filesystem::current_path();
+    std::filesystem::path  model_so_path = std::filesystem::current_path();
     model_so_path /= shared_object_name;
-    std::string model_so_path_string = model_so_path.strin();
+    std::string model_so_path_string = model_so_path.string();
     c10::InferenceMode mode;
 
     torch::inductor::AOTIModelContainerRunnerCuda runner(model_so_path_string);
