@@ -7,7 +7,7 @@ Define a path to the `CMAKE_PREFIX_PATH` variable to locate the LibTorch library
 Use script `compile_model_polaris.sh`. this will give you a new shared object `model.so`
 
 ## Step 2: Build the inference executable
-Use script `infer_model.sh` to build the inference executable and place the model into the `build` directory.
+Use script `infer_model_polaris.sh` to build the inference executable. This will also move previously created shared library to the `build` directory.
 
 ## Running the executable
 `aoti_example` binary has been generated in the `build` directory, executing it will display results akin to the following:
