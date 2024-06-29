@@ -12,6 +12,7 @@ Use script `infer_model_polaris.sh` to build the inference executable. This will
 ## Running the executable
 `aoti_example` binary has been generated in the `build` directory, executing it will display results akin to the following:
 
+```
 $ ./aoti_example
 Result from the first inference:
 0.4866
@@ -27,6 +28,7 @@ Result from the second inference:
 0.4883
 0.4703
 [ CUDAFloatType{2,1} ]
+```
 
 ## References
 - [PyTorch AOTI](https://pytorch.org/docs/main/torch.compiler_aot_inductor.html)
